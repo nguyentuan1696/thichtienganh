@@ -1,0 +1,21 @@
+:root {
+  --container-width: 1140px;
+  --container-width-xl: 1320px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--ifm-container-width);
+  padding: 0 var(--ifm-spacing-horizontal);
+  width: 100%;
+
+  &--fluid {
+    max-width: inherit;
+  }
+
+  @media (min-width: 1440px) {
+    & {
+      max-width: var(--container-width-xl);
+    }
+  }
+}
