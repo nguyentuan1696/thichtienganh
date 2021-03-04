@@ -11,6 +11,10 @@ import BlogListPaginator from './BlogListPaginator'
 import BlogSidebar from './BlogSidebar'
 import BlogTagsListPage from './BlogTagsListPage'
 import BlogTagsPostPage from './BlogTagsPostPage'
+import IconArrow from './IconArrow'
+import IconMenu from './IconMenu'
+import Seo from './Seo'
+import Layout from './Layout'
 
 export
 {
@@ -26,5 +30,10 @@ export
   BlogListPaginator,
   BlogSidebar,
   BlogTagsListPage,
-  BlogTagsPostPage
+  BlogTagsPostPage,
+  IconArrow,
+  IconMenu,
+  Seo,
+  Layout
+  
 }

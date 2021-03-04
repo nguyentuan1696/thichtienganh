@@ -28,7 +28,7 @@ module.exports = {
             },
             {
               lebel: "Second Doc",
-              to: "/docs/doc2/",
+              to: "docs/doc2/",
             },
           ],
         },
