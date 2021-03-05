@@ -1,12 +1,8 @@
-import Link from "next/link";
-
-export default function FourOhFour() {
+const NotFound = () =>
+{
   return (
-    <>
-      <h1>404 - Page Not Found</h1>
-      <Link href="/">
-        <a>Go back home</a>
-      </Link>
-    </>
-  );
+    <h1>Not Found</h1>
+  )
 }
+
+export default NotFound
