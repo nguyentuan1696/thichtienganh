@@ -54,6 +54,19 @@
         max-width: var(--col-width);
       }
     }
+
+    @for $column from 1 to 12 {
+      &.col--#{$column} {
+        --col-width: calc(#{$column} / 12 * 100%);
+
+        flex: 0 0 var(--col-width);
+        max-width: var(--col-width);
+      }
+
+      &.col--offset-#{$column} {
+        margin-left: calc(#{$column} / 12 * 100);
+      }
+    }
   }
     &--no-gutters {
     margin-left: 0;
