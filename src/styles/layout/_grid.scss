@@ -1,3 +1,7 @@
+/* To-Do
+- Add column
+*/
+
 :root {
   --container-width: 1140px;
   --container-width-xl: 1320px;
@@ -5,7 +9,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: var(--ifm-container-width);
+  max-width: var(--container-width);
   padding: 0 var(--ifm-spacing-horizontal);
   width: 100%;
 
@@ -15,7 +19,69 @@
 
   @media (min-width: 1440px) {
     & {
-      max-width: var(--container-width-xl);
+      max-width: var(--ifm-container-width-xl);
     }
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 calc(var(--spacing-horizontal) * -1);
+
+  & .col {
+    --col-width: 100%;
+
+    flex: 1 0;
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0 var(--spacing-horizontal);
+    width: 100%;
+
+    &[class*='col--'] {
+      flex: 0 0 var(--col-width);
+      max-width: var(var(--col-width));
+    }
+
+    @media (--narrow-window) {
+      /* Increase specificity. */
+      &.col.col {
+        --col-width: 100%;
+        flex-basis: var(--col-width);
+        margin-left: 0;
+
+        max-width: var(--col-width);
+      }
+    }
+  }
+    &--no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+
+    & > .col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--align-top {
+    align-items: flex-start;
+  }
+
+  &--align-bottom {
+    align-items: flex-end;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--align-stretch {
+    align-items: stretch;
+  }
+
+  &--align-baseline {
+    align-items: baseline;
   }
 }
