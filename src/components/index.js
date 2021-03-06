@@ -15,6 +15,8 @@ import IconArrow from './IconArrow'
 import IconMenu from './IconMenu'
 import Seo from './Seo'
 import Layout from './Layout'
+import LayoutHead from './LayoutHead'
+import LayoutProviders from './LayoutProviders'
 
 export
 {
@@ -34,6 +36,7 @@ export
   IconArrow,
   IconMenu,
   Seo,
-  Layout
-  
+  Layout,
+  LayoutHead,
+  LayoutProviders
 }
