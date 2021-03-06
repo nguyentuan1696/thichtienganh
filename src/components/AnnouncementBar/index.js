@@ -7,6 +7,15 @@ const AnnouncementBar = () => {
     closeAnnouncementBar,
   } = userPreferencesContext()
 
+  if (!announcementBar) {
+  return null
+  }
+  
+  const { content, backgroundColor, textColor, isCloseable } = announcementBar
+  if (!content || (isCloseable && isAnnouncementBarClosed)) {
+   return null
+  }
+
   return <h1>AnnouncementBar</h1>
 }
 

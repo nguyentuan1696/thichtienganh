@@ -41,7 +41,7 @@
 
     &[class*='col--'] {
       flex: 0 0 var(--col-width);
-      max-width: var(var(--col-width));
+      max-width: var(--col-width);
     }
 
     @media (--narrow-window) {
