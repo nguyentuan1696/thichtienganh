@@ -5,7 +5,7 @@ const LINK_CLASS_NAME = 'table-of-contents__link'
 const ACTIVE_LINK_CLASS_NAME = 'table-of-contents__link--active'
 const TOP_OFFSET = 100
 
-const Heading = ({ toc, isChild }) => {
+const Headings = ({ toc, isChild }) => {
   if (!toc.length) {
     return null
   }
